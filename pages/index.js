@@ -1,6 +1,6 @@
 import React from "react";
 import { useSession } from "next-auth/react";
-import App from "../src/App.mjs";
+import { make as App } from '../src/App.mjs';
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -8,7 +8,7 @@ export default function Home() {
   if (status === "authenticated") {
     return (
       <>
-        <App />
+        <App/>
         <p>Signed in as {session.user.email}</p>
       </>
     );
@@ -16,3 +16,4 @@ export default function Home() {
 
   return <a href="/api/auth/signin">Sign in</a>;
 }
+
