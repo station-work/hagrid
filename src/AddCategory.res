@@ -17,8 +17,6 @@ module Window = {
   external alert: string => unit = "alert"
 }
 
-
-
 @react.component
 let make = () => {
   let initialState = "";

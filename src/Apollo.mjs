@@ -5,14 +5,14 @@ import * as ApolloClient from "../node_modules/rescript-apollo-client/src/Apollo
 import * as ApolloClient__Core_ApolloClient from "../node_modules/rescript-apollo-client/src/@apollo/client/core/ApolloClient__Core_ApolloClient.mjs";
 import * as ApolloClient__Cache_InMemory_InMemoryCache from "../node_modules/rescript-apollo-client/src/@apollo/client/cache/inmemory/ApolloClient__Cache_InMemory_InMemoryCache.mjs";
 
-var graphqlEndpoint = "localhost:7000/v1/graphql";
+var graphqlEndpoint = "/api/graphql";
 
 var headers = {
   "x-hasura-admin-secret": "7eGbw04tevM2XHLsYNd7LEl2fnB3mp/BViBe+7dWV7w"
 };
 
 var client = ApolloClient.make((function (param) {
-        return "http://" + graphqlEndpoint;
+        return graphqlEndpoint;
       }), undefined, Caml_option.some(headers), undefined, ApolloClient__Cache_InMemory_InMemoryCache.make(undefined, undefined, undefined, undefined, undefined, undefined), undefined, undefined, false, undefined, ApolloClient__Core_ApolloClient.DefaultOptions.make(ApolloClient__Core_ApolloClient.DefaultMutateOptions.make(undefined, undefined, true, undefined, undefined, undefined), undefined, undefined, undefined), undefined, undefined, undefined, undefined, undefined, undefined, undefined);
 
 export {
