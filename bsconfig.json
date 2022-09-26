@@ -4,6 +4,18 @@
     {
       "dir": "src",
       "subdirs": true
+    },
+    {
+      "dir": "pages",
+      "subdirs": true
+    },
+    {
+      "dir": "components",
+      "subdirs": true
+    },
+    {
+      "dir": "bindings",
+      "subdirs": true
     }
   ],
   "package-specs": [
@@ -13,11 +25,12 @@
     }
   ],
   "reason": { "react-jsx": 3 },
-  "suffix": ".mjs",
+  "suffix": ".bs.js",
   "bs-dependencies": [
     "@rescript/react",
     "@reasonml-community/graphql-ppx",
-    "rescript-apollo-client"
+    "rescript-apollo-client",
+    "rescript-next"
   ],
   "ppx-flags": ["@reasonml-community/graphql-ppx/ppx"],
   "graphql": {

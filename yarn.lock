@@ -1571,6 +1571,11 @@ rescript-apollo-client@^3.1.0:
   resolved "https://registry.yarnpkg.com/rescript-apollo-client/-/rescript-apollo-client-3.1.0.tgz#42c710cec7b22ce694481a5a81cf3c8b089a8c2a"
   integrity sha512-nkHRNNP5FRaOzDCqcBW2awHPBWvDBLEET+Ngzuq9mPeD/V/eJcFeuoby0r9of8TzXfJokfWqItoCxDvZntndMw==
 
+rescript-next@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/rescript-next/-/rescript-next-12.0.1.tgz#c29dbe7b142fb86c40d47cfbcae81ec6f1ffb4c1"
+  integrity sha512-QtT2dutO6upBSN9VaZ09bwmLybadFGcqbyGjAGsVMASkiYmk8j/xe5Ek1ZE6IZdRvL7kgidOSgvh//8CXGgkWA==
+
 rescript@^10.0.1:
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/rescript/-/rescript-10.0.1.tgz#5b2da8a8bcfb994bed1eb24820bf10cfb9d8c440"

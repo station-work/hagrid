@@ -1,7 +1,7 @@
 import React from "react";
 import { useSession } from "next-auth/react";
-import { make as App } from '../src/App.mjs';
-import { signOut } from "next-auth/react"
+import { make as App } from "../src/App.bs";
+import { signOut } from "next-auth/react";
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -9,13 +9,12 @@ export default function Home() {
   if (status === "authenticated") {
     return (
       <>
-        <App/>
-      <p>Signed in as {session.user.email}</p>
-      <button onClick={() => signOut()}>Sign out</button>
+        <App />
+        <p>Signed in as {session.user.email}</p>
+        <button onClick={() => signOut()}>Sign out</button>
       </>
     );
   }
 
   return <a href="/api/auth/signin">Sign in</a>;
 }
-

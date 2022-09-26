@@ -34,23 +34,22 @@ let make = () => {
   | {error: Some(_error)} => "Error loading data"->React.string
   | {data: None} => "Not to render"->React.string
   | {data: Some({hagrid_category})} => {
-         <div>
-          {hagrid_category
-            ->Belt.Array.map(category => {
-
-      <div
-      key={category.id->Js.String.make}>
+      <div>
+        {hagrid_category
+          ->Belt.Array.map(category => {
+            <div
+              key={category.id->Js.String.make}>
                 <h3>{category.name->React.string}</h3>
-                <button onClick={(_ => {
-                  removeCategory({ id: category.id })->ignore;
-                } )}>{"Deletar"->React.string}</button>
-  
-      </div>
-            })
-            ->React.array
-          }
+                <button
+                  onClick={(_ => {
+                    removeCategory({ id: category.id })->ignore;
+                  })}>
+                    {"Deletar"->React.string}
+                </button>
+            </div>
+          })->React.array}
         </div>
-      }
+    }
   }
 }
 
